@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import './App.css'
+import './App.css';
+import './App.scss';
+import SideBar from "./components/SideBar";
 import SearchIcon from './search.svg'
 import MovieCard from "./MovieCard";
 //1e1eeb4
@@ -20,6 +22,7 @@ const App = () => {
 
     return (
         <div className="app">
+             <SideBar />
             <h1>Curiosity's Diary</h1>
         
         <div className="search">
