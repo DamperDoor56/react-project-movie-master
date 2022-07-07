@@ -23,7 +23,7 @@ const App = () => {
     return (
         <div className="app">
              <SideBar />
-            <h1>Curiosity's Diary</h1>
+            <h1>Fuck react</h1>
         
         <div className="search">
             <input placeholder="Search for movies" 
