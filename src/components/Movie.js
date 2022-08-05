@@ -1,10 +1,9 @@
 import React from 'react';
 
-const imageApi = "https://image.tmdb.org/t/p/w1280";
 
-const Movie = ({ title, poster_path, overview, vote_average}) => (
-    <div className="movie">
-        <img src={imageApi + poster_path} alt={title} />
+const MovieBox = ({}) => (
+    <div>
+        Movie Info
     </div>
 );
-export default Movie;
+export default MovieBox;
