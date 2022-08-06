@@ -1,13 +1,22 @@
 import React,{ useEffect, useState } from 'react';
 import MovieBox from './components/Movie';
+import Row from './components/Row';
+import requests from './components/request';
 import './index.css';
-import { requests } from './components/request'
+
+const API_URL= 'https://api.themoviedb.org/3/movie/popular?api_key=523035a60f448d64fb44e36fddc972c8';
 
 function App() {
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState('');
 
-
+  useEffect(() => {
+    fetch(API_URL)
+    .then((res) => res.json())
+    .then(data => {
+      setMovies(data.results);
+    })
+  }, [])
 
   
  const searchMovie = async(e) =>{
@@ -43,7 +52,7 @@ function App() {
       </header>
       <h1 className='titles'>Popular</h1>
       <div className='Scrolled'> 
-      {movies.map((movieReq) => <MovieBox key={movieReq.id} {...movieReq}/>)}
+      <Row fetchUrl={requests.fetchNetflixOriginals}/>
       </div>
       <div className='movie-container'>
       {movies.map((movieReq) => <MovieBox key={movieReq.id} {...movieReq}/>)}

@@ -1,0 +1,9 @@
+Row{    
+    display: grid ;
+    grid-auto-flow: column ;
+    gap: 0.5rem ;
+    grid-auto-columns: 20% ;
+    overflow-x: auto ;
+    overscroll-behavior-inline: contain ;
+    padding: 0 1rem 1rem 1rem;
+}
