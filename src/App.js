@@ -18,10 +18,14 @@ function App() {
   }, [])
 
   return (
-    <div>
-      <h1>Movies</h1>
+      <>
+      <header>
+        <input className='search' type="text" placeholder="Search"/>
+      </header>
+    <div className='movie-container'>
       {movies.map((movieReq) =><MovieBox key={movieReq.id} {...movieReq}/>)}
     </div>
+    </>
   );
 }
 
