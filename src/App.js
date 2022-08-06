@@ -1,20 +1,13 @@
 import React,{ useEffect, useState } from 'react';
 import MovieBox from './components/Movie';
 import './index.css';
-
-const API_URL= 'https://api.themoviedb.org/3/movie/popular?api_key=523035a60f448d64fb44e36fddc972c8';
+import { requests } from './components/request'
 
 function App() {
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState('');
 
-  useEffect(() => {
-    fetch(API_URL)
-    .then((res) => res.json())
-    .then(data => {
-      setMovies(data.results);
-    })
-  }, [])
+
 
   
  const searchMovie = async(e) =>{
