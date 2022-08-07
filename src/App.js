@@ -50,13 +50,22 @@ function App() {
          />
       </form>
       </header>
-      <h1 className='titles'>Popular</h1>
+      <h1 className='titles this-one'>Popular</h1>
       <div className='Scrolled'> 
       <Row fetchUrl={requests.fetchTrending}/>
+      </div>
+      <h1 className='titles'>Terror</h1>
+      <div className='Scrolled'> 
+      <Row fetchUrl={requests.fetchHorrorMovies}/>
+      </div>
+      <h1 className='titles'>Fall in Love</h1>
+      <div className='Scrolled'> 
+      <Row fetchUrl={requests.fetchRomanceMovies}/>
       </div>
       <div className='movie-container'>
       {movies.map((movieReq) => <MovieBox key={movieReq.id} {...movieReq}/>)}
       </div>
+      
    
     </>
   );

@@ -3,6 +3,16 @@
 *{
     box-sizing: border-box;
 }
+*::-webkit-scrollbar{
+    background: #00131a;
+}
+*::-webkit-scrollbar-thumb{
+    background: #053d52;
+    border-radius: 15px;
+}
+*::-webkit-scrollbar-thumb:active{
+    background-color: rgb(64, 133, 133);
+}
 
 body{
     background-color: #001a23;
@@ -37,11 +47,16 @@ header{
     padding: 0.5rem 1.5rem;
     outline: none;
 }
-.titles{
+.this-one{
     font-size: 25px;
     margin-top: 6rem;
     font-weight: bolder;
     padding-left: 1rem;
+}
+.titles{
+    font-weight: bolder;
+    padding-left: 1rem;
+    font-size: 25px;
 }
 
 .movie-container{
@@ -67,18 +82,17 @@ header{
 .movie-info{
     align-items: center;
     justify-content: space-between;
-    display: flex;
-    padding: 1rem;
+    display: inline;
+    padding: 2rem;
 }
 .movie{
-    height: 470px;
+    width: 200px;
+    max-height: 300px;
     position: relative;
     border-radius: 3px;
     box-shadow: 3px 3px 5px rgba(0, 0 , 0, 0.1);
     overflow: hidden;
-    background-color: #14746f;
     margin: 0.2rem;
-    width: 250px;
 }
 .movie img{
     max-width:100% ;

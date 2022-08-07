@@ -15,14 +15,13 @@ const setVoteClass = (vote) => {
 const MovieBox = ({title, poster_path, vote_average, release_date, overview}) => (
     <div className='movie'>
         <img src={API_IMG + poster_path} alt=''></img>
+        
+        <div className='movie-over'>
         <div className='movie-info'>
             <h1>{title}<p>{release_date}</p></h1>
-            
             <span className={ `tag ${setVoteClass(vote_average)}`}>
             {vote_average}</span>
         </div>
-        <div className='movie-over'>
-            <h2>Summary:</h2>
             <p>{overview}</p>
         </div>
     </div>
