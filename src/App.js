@@ -52,7 +52,7 @@ function App() {
       </header>
       <h1 className='titles'>Popular</h1>
       <div className='Scrolled'> 
-      <Row fetchUrl={requests.fetchNetflixOriginals}/>
+      <Row fetchUrl={requests.fetchTrending}/>
       </div>
       <div className='movie-container'>
       {movies.map((movieReq) => <MovieBox key={movieReq.id} {...movieReq}/>)}
