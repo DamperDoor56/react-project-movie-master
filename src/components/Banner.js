@@ -9,7 +9,7 @@ function Banner(){
 
     useEffect (() =>{
         async function fetchData() {
-            const request = await axios.get(requests.fetchTopRated);
+            const request = await axios.get(requests.fetchNetflixOriginals);
             setMovies(
                 request.data.results[
                     Math.floor(Math.random() * (request.data.results.length - 1))
@@ -27,8 +27,8 @@ function Banner(){
     }
 
     return(
-        <header>
-            <div className="banner"
+        <header className="banner"
+            
             style={{
                 backgroundSize: 'cover',
                 backgroundImage: `url(
@@ -38,15 +38,21 @@ function Banner(){
             }}
             >
                 <div className="banner__contents">
-                    <h1 className="banner__title">{movie?.title || movie?.name || movie?.original_name}</h1>
+                    <h1 className="banner__title">{movie?.title || movie?.name || movie?.original_name}
+                    </h1>
                 
                 <div className="banner__buttons">
                     <button className="banner__button">Play</button>
                     <button className="banner__button">Add to My List</button>
                 </div>
-                <h3 className="banner__description">{truncate(movie?.overview, 250)}</h3>
+                <h3 className="banner__description">
+                    {truncate(movie?.overview, 200)}
+                    </h3>
                 </div>
-            </div>
+
+
+
+               <div className="banner--fadeBottom" />
         </header>
     )
 }

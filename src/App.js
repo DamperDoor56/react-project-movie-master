@@ -3,41 +3,27 @@ import Row from './components/Row';
 import requests from './components/request';
 import './index.css';
 import Banner from './components/Banner';
+import NavBar from './components/Navbar'
 
 function App() {
-  const [query, setQuery] = useState('');
 
-  
- const changeHandler = (e) =>{
-  setQuery(e.target.value);
- }
+ 
   return (
       <>
-      <nav>
-        <a href='/' className='title' >MovieDB Project</a>
-        <form> 
-        <input
-         className='search'
-         type="text"
-         placeholder="Search"
-         value={query} onChange={changeHandler}
-         name='query'
-         />
-      </form>
-      </nav>
+      <NavBar />
       <Banner />
       <h1 className='titles this-one'>Popular</h1>
-      <div className='Scrolled'> 
       <Row fetchUrl={requests.fetchTrending}/>
-      </div>
       <h1 className='titles'>Terror</h1>
-      <div className='Scrolled'> 
       <Row fetchUrl={requests.fetchHorrorMovies}/>
-      </div>
-      <h1 className='titles'>Fall in Love</h1>
-      <div className='Scrolled'> 
+      <h1 className='titles'>Romance</h1>
       <Row fetchUrl={requests.fetchRomanceMovies}/>
-      </div>   
+      <h1 className='titles'>Documentaries</h1>
+      <Row fetchUrl={requests.fetchDocumentaries}/>
+      <h1 className='titles'>Comedy</h1>
+      <Row fetchUrl={requests.fetchComedyMovies}/>
+      <h1 className='titles'>Action</h1>
+      <Row fetchUrl={requests.fetchActionMovies}/>
     </>
   );
 }

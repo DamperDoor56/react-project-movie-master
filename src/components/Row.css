@@ -4,16 +4,6 @@
     overflow-y: hidden;
     padding: 1rem;
 }
-.row__posters::-webkit-scrollbar{
-    background: #00131a;
-}
-.row__posters::-webkit-scrollbar-thumb{
-    background: #053d52;
-    border-radius: 15px;
-}
-.row__posters::-webkit-scrollbar-thumb:active{
-    background-color: rgb(64, 133, 133);
-}
 
 .row__poster{
     width: 100%;
