@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 *::-webkit-scrollbar{
-    background: #00131a;
+    background: #111 ;
 }
 *::-webkit-scrollbar-thumb{
-    background: #053d52;
+    background: rgb(5, 26, 34);
     border-radius: 15px;
 }
 *::-webkit-scrollbar-thumb:active{
@@ -15,7 +15,7 @@
 }
 
 body{
-    background-color: #001a23;
+    background-color: #111;
     color: white;
     font-family: "Poppins", sans-serif;
     margin: 0;
@@ -46,12 +46,6 @@ nav{
     color: azure;
     padding: 0.5rem 1.5rem;
     outline: none;
-}
-.this-one{
-    font-size: 25px;
-    margin-top: 6rem;
-    font-weight: bolder;
-    padding-left: 1rem;
 }
 .titles{
     font-weight: bolder;
