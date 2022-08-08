@@ -2,8 +2,6 @@ import axios from "axios";
 import React, { useState, useEffect} from "react";
 import requests from "./request";
 
-const base_url= 'https://image.tmdb.org/t/p/w500';
-
 
 function Banner(){
     const [movie, setMovie] = useState([]);
@@ -14,20 +12,21 @@ function Banner(){
                 const request = await axios.get(requests.fetchNetflixOriginals);
                 setMovie(
                     request.data.results[
-                         Math.floor(Math.random() * request.data.results.length - 1)
+                         Math.floor(Math.random() * (request.data.results.length - 1))
                         ]
                 );
                return request;
             }
             fetchData();
         }, []);
-        console.log(movie);
+        console.log(movie)
+        
 return (
     <header className="banner"
        style={{
         backgroundSize: 'cover',
         backgroundPosition: "center center",
-        backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+        backgroundImage: `url("https://image.tmdb.org/t/p/w500/${movie?.backdrop_path}")`,
        }}
         >
         <div className="banner__contents">
