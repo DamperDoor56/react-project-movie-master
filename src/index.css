@@ -20,14 +20,14 @@ body{
     font-family: "Poppins", sans-serif;
     margin: 0;
 }
-header{
+nav{
     background-color: #172f37;
     padding: 1rem;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 99;
-    display: flex;
+    display: none;
     justify-content: space-between;
     
 }

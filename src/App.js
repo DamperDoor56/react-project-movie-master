@@ -1,7 +1,8 @@
-import React,{ useEffect, useState } from 'react';
+import React,{ useState } from 'react';
 import Row from './components/Row';
 import requests from './components/request';
 import './index.css';
+import Banner from './components/Banner';
 
 function App() {
   const [query, setQuery] = useState('');
@@ -12,7 +13,7 @@ function App() {
  }
   return (
       <>
-      <header>
+      <nav>
         <a href='/' className='title' >MovieDB Project</a>
         <form> 
         <input
@@ -23,7 +24,8 @@ function App() {
          name='query'
          />
       </form>
-      </header>
+      </nav>
+      <Banner />
       <h1 className='titles this-one'>Popular</h1>
       <div className='Scrolled'> 
       <Row fetchUrl={requests.fetchTrending}/>
