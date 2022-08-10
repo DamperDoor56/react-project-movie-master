@@ -32,7 +32,7 @@ function Banner(){
             style={{
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
-                backgroundImage: `linear-gradient(90deg, rgba(35,36,38,0.8) 22%, rgba(19,20,20,0.2) 58%),
+                backgroundImage: `linear-gradient(90deg, rgba(35,36,38,0.7) 22%, rgba(19,20,20,0.2) 58%),
                 url(
                     "https://image.tmdb.org/t/p/original/${movie?.backdrop_path}"
                 )`,
