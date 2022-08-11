@@ -21,7 +21,8 @@ function Row({title, fetchUrl, poster_path, vote_average, release_date, overview
   
 
     return(
-        <div className="row" onClick={() => setShow(true)}>
+        // onClick={() => setShow(true)}
+        <div className="row">
             <h2>{title}</h2>
 
             <div className="row__posters" >
