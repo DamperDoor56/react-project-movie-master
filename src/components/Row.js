@@ -8,7 +8,7 @@ const base_url= 'https://image.tmdb.org/t/p/w500';
 
 function Row({title, fetchUrl, poster_path, vote_average, release_date, overview}){
     const [movies, setMovies] = useState([]);
-    const [show, setShow] = useState(false);
+    const [show, setShow] = React.useState(false);
 
     useEffect(() =>{
         async function fetchData() {
@@ -33,10 +33,12 @@ function Row({title, fetchUrl, poster_path, vote_average, release_date, overview
                 ))}
             </div>
             { 
-                show?<div className="Tuttt">{movies.map(movie => (
-                    <h1>{movie.name}</h1>))}
-                    </div>
-            :null
+                show?<div className="Tuttt">
+                    {/* Need fix */}
+                    <button onClick={() => setShow(false)}>X</button> 
+                    <h1>title</h1>
+                    <p>lorem ipsaunajdsbjd</p>
+                    </div>:null
             }
             
         </div>
