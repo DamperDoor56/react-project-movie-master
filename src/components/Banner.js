@@ -1,31 +1,32 @@
 import axios from "./axios.js";
 import React, { useState, useEffect} from "react";
 import requests from "./request";
-import './Banner.css'
+import './Banner.css';
 
 
 function Banner(){
     const [movie, setMovies] = useState([]);
 
+
+    //get random tv shows or movies on banner
     useEffect (() =>{
         async function fetchData() {
             const request = await axios.get(requests.fetchNetflixOriginals);
             setMovies(
                 request.data.results[
-                    Math.floor(Math.random() * (request.data.results.length - 1))
+                    Math.floor(Math.random() * (request.data.results.length - 1)) 
                 ]
             );
             return request;
         }
         fetchData();
     }, []);
-
-    console.log(movie);
-
+    
+    //cut the overview if has too much caracters
     function truncate(str, n) {
         return str?.length > n ? str.substr(0, n - 1) + "..." : str;  
     }
-
+    
     return(
         <header className="banner"
             
@@ -44,15 +45,13 @@ function Banner(){
                     </h1>
                 
                 <div className="banner__buttons">
-                    <button className="banner__button">Play</button>
+                    <button className="banner__button" >Play</button>
                     <button className="banner__button">Add to My List</button>
                 </div>
                 <h3 className="banner__description">
                     {truncate(movie?.overview, 200)}
                     </h3>
                 </div>
-
-
 
                <div className="banner--fadeBottom" />
         </header>

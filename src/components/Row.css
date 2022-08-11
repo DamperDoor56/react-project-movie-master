@@ -1,4 +1,5 @@
 .row__posters{
+    cursor: pointer;
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -14,4 +15,13 @@
 }
 .row__poster:hover{
     transform: scale(1.08);
+}
+.Tuttt{
+    position: absolute;
+    color: aliceblue !important; 
+    font-size: 16px !important;
+    background-color: rgb(75, 0, 0);
+    z-index: 98;
+    width: 500px;
+    height: 200px;
 }
