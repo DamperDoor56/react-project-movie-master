@@ -1,4 +1,4 @@
-This is a project made with SASS and React
+This is a project made with vainilla CSS and React
 
 API_URL= 'https://api.themoviedb.org/3/movie/popular?api_key=523035a60f448d64fb44e36fddc972c8';
 API_IMG= 'https://image.tmdb.org/t/p/w500';
